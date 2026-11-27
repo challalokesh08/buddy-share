@@ -7,6 +7,8 @@ app/android/build/
 app/android/app/build/
 app/android/app/.cxx/
 app/android/local.properties
+app/android/keystore.properties
+app/android/app/*.keystore
 app/android/.idea/
 app/android/*.iml
 dist/

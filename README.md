@@ -34,7 +34,7 @@ Android app built with **Expo (React Native)**. The delivered APK is **standalon
 - **No setup needed.** Install it, open it, sign up with any `@cambridge.edu.in` address, and everything runs on the phone. No computer, no Wi‑Fi, no server URL.
 - Data (requests, offers, rentals, wallet, notifications) persists across restarts. **Profile → Reset demo data** wipes activity but keeps your account.
 - Built-in Cambridge students (Rohan, Ananya, Vikram) automatically quote on your requests, pay, and confirm returns after a few seconds so you can experience every step. You can also quote on *their* requests.
-- Unsigned-for-debug variant also available at `app/android/app/build/outputs/apk/debug/app-debug.apk`.
+- A debug variant can be generated with `./gradlew assembleDebug` inside `app/android`.
 
 To rebuild after code changes:
 ```bash
@@ -42,7 +42,7 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 cd app/android && ./gradlew assembleRelease
 cp app/build/outputs/apk/release/app-release.apk ../../BuddyShare-v1.0.0-release.apk
 ```
-The signing keystore is `app/android/app/buddy-share.keystore` (password `buddy1234`). **Back it up** — you need the same key to publish updates. To keep signing config across a fresh `expo prebuild`, re-apply the `signingConfigs.release` block in `app/android/app/build.gradle` and the four `BUDDY_RELEASE_*` values in `app/android/gradle.properties`.
+Signing secrets are **not in the repo**: keep your keystore at `app/android/app/buddy-share.keystore` and put its password/alias in `app/android/keystore.properties` (both git-ignored). Generate your own keystore before publishing — you need the same key for future updates. After a fresh `expo prebuild`, restore the `signingConfigs.release` block in `app/android/app/build.gradle`.
 
 ---
 
