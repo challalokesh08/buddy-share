@@ -1,0 +1,19 @@
+{
+  "name": "buddy-share-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Buddy Share API + realtime server",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.3.0",
+    "ws": "^8.23.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

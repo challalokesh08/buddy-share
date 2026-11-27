@@ -1,0 +1,14 @@
+node_modules/
+server/data/
+app/.expo/
+app/dist/
+app/android/.gradle/
+app/android/build/
+app/android/app/build/
+app/android/app/.cxx/
+app/android/local.properties
+app/android/.idea/
+app/android/*.iml
+dist/
+*.log
+.DS_Store
